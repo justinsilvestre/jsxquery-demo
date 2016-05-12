@@ -1,0 +1,135 @@
+<%----This is an automatically generated .jsp file---%>
+<%----You must make edits in the appropriate .js(x)--%>
+<%----files, or they will probably get overwritten.--%>
+<%----Look in 'filetree.jsx' to find those files.---%>
+
+
+<html>
+	
+	<head>
+		
+		<title>
+		Dynamic values
+		</title>
+		
+		
+	</head>
+	
+	
+	<body>
+		
+		<h1>
+		The Original
+		</h1>
+		
+		
+		<pre>
+			
+&lt;div&gt;
+	
+	&lt;div&gt;
+	&lt;c:choose&gt;&lt;c:when test=&quot;${condition == true}&quot;&gt;&lt;span&gt;Two elements&lt;/span&gt;&lt;/c:when&gt;&lt;c:otherwise&gt;&lt;em&gt;trigger c:choose.&lt;/em&gt;&lt;/c:otherwise&gt;&lt;/c:choose&gt;
+	&lt;/div&gt;
+	
+	
+	&lt;div&gt;
+	${condition == true ? "Strings favor" : "conditional expressions."}
+	&lt;/div&gt;
+	
+	
+	&lt;div&gt;
+	&lt;c:if test=&quot;${condition == true}&quot;&gt;&lt;span&gt;Only one possible outcome&lt;/span&gt;&lt;/c:if&gt;
+	&lt;/div&gt;
+	
+	
+	&lt;div&gt;
+	&lt;c:if test=&quot;${!(condition == true)}&quot;&gt;&lt;span&gt;means a c:if tag&lt;/span&gt;&lt;/c:if&gt;
+	&lt;/div&gt;
+	
+	
+	&lt;div&gt;
+	${condition == true ? "unless you're just dealing with a string." : ''}
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+
+		</pre>
+		
+		
+		<h1>
+		With Test Condition Set to TRUE
+		</h1>
+		
+		
+		<div>
+			
+			<div>
+			<span>Two elements</span>
+			</div>
+			
+			
+			<div>
+			Strings favor
+			</div>
+			
+			
+			<div>
+			<span>Only one possible outcome</span>
+			</div>
+			
+			
+			<div>
+			
+			</div>
+			
+			
+			<div>
+			unless you&#39;re just dealing with a string.
+			</div>
+			
+			
+		</div>
+		
+		
+		<h1>
+		With Test Condition Set to FALSE
+		</h1>
+		
+		
+		<div>
+			
+			<div>
+			<em>trigger c:choose.</em>
+			</div>
+			
+			
+			<div>
+			conditional expressions.
+			</div>
+			
+			
+			<div>
+			
+			</div>
+			
+			
+			<div>
+			<span>means a c:if tag</span>
+			</div>
+			
+			
+			<div>
+			
+			</div>
+			
+			
+		</div>
+		
+		
+	</body>
+	
+	
+</html>
+

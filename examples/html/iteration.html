@@ -1,0 +1,77 @@
+<%----This is an automatically generated .jsp file---%>
+<%----You must make edits in the appropriate .js(x)--%>
+<%----files, or they will probably get overwritten.--%>
+<%----Look in 'filetree.jsx' to find those files.---%>
+
+
+<html>
+	
+	<head>
+		
+		<title>
+		Dynamic values
+		</title>
+		
+		
+	</head>
+	
+	
+	<body>
+		
+		<h1>
+		The Original
+		</h1>
+		
+		
+		<pre>
+			
+&lt;ul&gt;
+	
+	&lt;c:forEach var=&quot;productListItem&quot; items=&quot;${catalog.allProducts}&quot; varStatus=&quot;productListIndex&quot;&gt;
+		
+		&lt;li class=&quot;product&quot;&gt;
+		&lt;span class=&quot;index&quot;&gt;${productListIndex.loop}</span><span class="product-name">${productListItem.name}</span><span class="product-price">${productListItem.price}&lt;/span&gt;
+		&lt;/li&gt;
+		
+		
+	&lt;/c:forEach&gt;
+	
+	
+&lt;/ul&gt;
+
+
+		</pre>
+		
+		
+		<h1>
+		With Test Data Array
+		</h1>
+		
+		
+		<ul>
+			
+			<li class="product">
+			<span class="index">0</span><span class="product-name">applesauce</span><span class="product-price">$3.50</span>
+			</li>
+			
+			
+
+			<li class="product">
+			<span class="index">1</span><span class="product-name">pork chops</span><span class="product-price">$7.20</span>
+			</li>
+			
+			
+
+			<li class="product">
+			<span class="index">2</span><span class="product-name">crumpets</span><span class="product-price">£2.80</span>
+			</li>
+			
+			
+		</ul>
+		
+		
+	</body>
+	
+	
+</html>
+
