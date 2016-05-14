@@ -5,8 +5,8 @@ const DynamicValues = jsxQuery.createClass({
     const { jstlExpression, cOutTag } = this.props
 
     return (<div>
-      <p>This is from a JSTL Expression: {jstlExpression}</p>
-      <p>This is from a c:out tag: {cOutTag}</p>
+      <p className={jstlExpression}>This is from a JSTL Expression: {jstlExpression}</p>
+      <p data-some-attr={cOutTag}>This is from a c:out tag: {cOutTag}</p>
     </div>);
   }  
 })

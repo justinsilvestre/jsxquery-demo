@@ -27,16 +27,14 @@
 			
 &lt;div&gt;
 	
-	&lt;p&gt;
+	&lt;p class=&quot;${someValue == anotherValue}&quot;&gt;
 	This is from a JSTL Expression: ${someValue == anotherValue}
 	&lt;/p&gt;
 	
 	
-	&lt;p&gt;
+	&lt;p data-some-attr=&quot;&lt;c:out val=&quot;${someOtherValue}&quot; /&gt;&quot;&gt;
 		This is from a c:out tag: 
-		&lt;c:out val=&quot;${someOtherValue}&quot;&gt;
-		
-		&lt;/c:out&gt;
+		&lt;c:out val=&quot;${someOtherValue}&quot; /&gt;
 		
 		
 	&lt;/p&gt;
@@ -55,12 +53,12 @@
 		
 		<div>
 			
-			<p>
+			<p class="Ta-dah!">
 			This is from a JSTL Expression: Ta-dah!
 			</p>
 			
 			
-			<p>
+			<p data-some-attr="Replaced!">
 			This is from a c:out tag: Replaced!
 			</p>
 			
