@@ -3,71 +3,27 @@
 <%--- Please make any edits in the appropriate .js(x) ---%>
 <%--- files so they don't end up getting overwritten. ---%>
 
-
 <html>
-	
 	<head>
-		
-		<title>
-		Dynamic values
-		</title>
-		
-		
+		<title>Dynamic values</title>
 	</head>
-	
-	
+
 	<body>
-		
-		<h1>
-		The Original
-		</h1>
-		
-		
-		<pre>
-			
-&lt;div&gt;
-	
-	&lt;p class=&quot;${someValue == anotherValue}&quot;&gt;
-	This is from a JSTL Expression: ${someValue == anotherValue}
-	&lt;/p&gt;
-	
-	
-	&lt;p data-some-attr=&quot;&lt;c:out val=&quot;${someOtherValue}&quot; /&gt;&quot;&gt;
-		This is from a c:out tag: 
-		&lt;c:out val=&quot;${someOtherValue}&quot; /&gt;
-		
-		
-	&lt;/p&gt;
-	
-	
+		<h1>The Original</h1>
+
+		<pre>&lt;div&gt;
+	&lt;p class=&quot;${someValue == anotherValue}">This is from a JSTL Expression: ${someValue == anotherValue}&lt;/p&gt;
+
+	&lt;p&gt;This is from a c:out tag: &lt;c:out val=&quot;${someOtherValue}&quot; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
 		</pre>
-		
-		
-		<h1>
-		With Test Data
-		</h1>
-		
-		
-		<div>
-			
-			<p class="Ta-dah!">
-			This is from a JSTL Expression: Ta-dah!
-			</p>
-			
-			
-			<p data-some-attr="Replaced!">
-			This is from a c:out tag: Replaced!
-			</p>
-			
-			
-		</div>
-		
-		
-	</body>
-	
-	
-</html>
 
+		<h1>With Test Data</h1>
+
+		<div>
+			<p class="Ta-dah!">This is from a JSTL Expression: Ta-dah!</p>
+
+			<p>This is from a c:out tag: Replaced!</p>
+		</div>
+	</body>
+</html>
