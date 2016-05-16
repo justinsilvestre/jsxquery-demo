@@ -36,7 +36,10 @@ export default Iteration;
 
 module.exports =
 (<html>
-  <head><title>Dynamic values</title></head>
+  <head>
+    <meta charset="utf8" />
+    <title>Dynamic values</title>
+  </head>
   <body>
 
     <h1>The Original</h1>

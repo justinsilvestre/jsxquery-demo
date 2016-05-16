@@ -4,8 +4,10 @@ var controlFlow = 'npm run build-file examples/controlFlow.jsx examples/html/con
 var dynamicValues = 'npm run build-file examples/dynamicValues.jsx examples/html/dynamicValues.html';
 var iteration = 'npm run build-file examples/iteration.jsx examples/html/iteration.html';
 
-exec([controlFlow, dynamicValues, iteration].join(' && '))
-  .stdout.on('data', function(data) {
-      console.log(data); 
-  });;
+var execP = (command) => new Promise((res, rej) =>
+  exec(command, (err, stdout, stderr) => { console.log(stdout); console.log(stderr); err ? rej() : res(); })
+);
 
+execP(controlFlow)
+  .then(() => execP(dynamicValues))
+  .then(() => execP(iteration));
