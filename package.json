@@ -12,18 +12,18 @@
     "expect": "^1.20.1",
     "jquery": "^2.2.3",
     "jsdom": "^9.1.0",
-    "jsxquery": "^0.1.1",
-    "jsxquery-build": "^0.1.2",
+    "jsxquery": "^0.1.2",
+    "jsxquery-build": "^0.2.0",
     "minimist": "^1.2.0",
     "mocha": "^2.4.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "mocha --es_staging --harmony_destructuring --harmony_proxies --compilers js:babel-core/register --recursive",
-    "jsxquery-build": "node --harmony_proxies build.js",
-    "build-file": "babel-node --harmony_proxies buildMarkup.js",
+    "jsxquery-build": "node --harmony_proxies scripts/build.js",
+    "build-file": "babel-node --harmony_proxies scripts/buildMarkup.js",
     "build-examples": "node --harmony_proxies examples/build.js",
-    "sandbox": "babel-node --harmony_proxies sandbox.js"
+    "sandbox": "babel-node --harmony_proxies scripts/sandbox.js"
   },
   "repository": {
     "type": "git",

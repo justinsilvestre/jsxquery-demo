@@ -1,5 +1,5 @@
 var jsxQuery = require('jsxquery');
-var HelloWorld = require('./HelloWorld.jsx');
+var HelloWorld = require('./components/HelloWorld.jsx');
 
 module.exports = {
   myFirstJsp: <HelloWorld />,
