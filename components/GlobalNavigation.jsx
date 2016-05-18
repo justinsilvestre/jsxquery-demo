@@ -1,4 +1,5 @@
 const jsxQuery = require('jsxquery');
+const MiniCart = require('./MiniCart.jsx')
 
 class GlobalNavigation extends jsxQuery.Component {
   render() {
@@ -18,6 +19,8 @@ class GlobalNavigation extends jsxQuery.Component {
           <li><a href="#">Catalog</a></li>
           <li><a href="#">FAQs</a></li>
         </ul>
+
+        <MiniCart {...this.props} />
       </nav>
     );
   }
