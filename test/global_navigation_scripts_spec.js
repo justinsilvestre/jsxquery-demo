@@ -26,14 +26,14 @@ describe('JS for global navigation menu', () => {
     });
 
     it('hides mini-cart when button is clicked', (done) => {
-      $('#show-mini-cart').trigger('click');
+      $('#mini-cart-panel').show();
       $('#hide-mini-cart').trigger('click');
 
       // wait 400ms for slideUp() to finish
       setTimeout(() => {
-        expect($('#mini-cart-panel').css('display')).toNotEqual('none');
+        expect($('#mini-cart-panel').css('display')).toEqual('none');
         done();
       }, 400)
-    })
+    });
   });
 });
