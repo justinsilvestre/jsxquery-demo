@@ -1,7 +1,7 @@
 const jsxQuery = require('jsxquery');
 const MiniCart = require('./MiniCart.jsx')
 
-class GlobalNavigation extends jsxQuery.Component {
+class MainMenu extends jsxQuery.Component {
   render() {
     const { userIsLoggedIn, userFirstName } = this.props;
     
@@ -25,4 +25,4 @@ class GlobalNavigation extends jsxQuery.Component {
 };
 
 
-module.exports = GlobalNavigation;
+module.exports = MainMenu;
