@@ -2,14 +2,14 @@ const expect = require('expect');
 const jsxQuery = require('jsxquery');
 
 const setupDom = require('./helpers/setupDom');
-const GlobalNavigation = require('../components/GlobalNavigation.jsx');
+const MainMenu = require('../components/MainMenu.jsx');
 const user = require('./fixtures/user');
 const cart = require('./fixtures/cart');
 
-describe('Global navigation menu component', () => {
+describe('Main menu navigation component', () => {
   describe('when user is logged in', () => {
     before((done) =>
-      setupDom(<GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />, done)
+      setupDom(<MainMenu {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />, done)
     );
 
     it('displays welcome message', () => {
@@ -23,7 +23,7 @@ describe('Global navigation menu component', () => {
 
   describe('when user is not logged in', () => {
     before((done) =>
-      setupDom(<GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsNotLoggedIn} />, done)
+      setupDom(<MainMenu {...cart.cartWithThreeItems} {...user.userIsNotLoggedIn} />, done)
     );
 
     it('does not display welcome message', () => {

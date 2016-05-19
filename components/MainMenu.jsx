@@ -9,18 +9,16 @@ class GlobalNavigation extends jsxQuery.Component {
     const logInLink = <a id="log-in-link" href="#">Log in</a>
 
     return (
-      <nav id="global-menu">
+      <nav id="main-menu">
         <section id="account">
           {userIsLoggedIn ? welcomeMessage : logInLink}
         </section>
 
-        <ul id="global-menu-links">
+        <ul id="main-menu-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Catalog</a></li>
           <li><a href="#">FAQs</a></li>
         </ul>
-
-        <MiniCart {...this.props} />
       </nav>
     );
   }

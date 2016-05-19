@@ -2,7 +2,7 @@ const expect = require('expect');
 const jsxQuery = require('jsxquery');
 
 const setupDom = require('./helpers/setupDom');
-const GlobalNavigation = require('../components/GlobalNavigation.jsx');
+const GlobalHeader = require('../components/GlobalHeader.jsx');
 const user = require('./fixtures/user');
 const cart = require('./fixtures/cart');
 
@@ -11,13 +11,13 @@ const cart = require('./fixtures/cart');
 // inside our test DOM.
 const proxyquire = require("proxyquire");
 
-describe('Global navigation menu scripts', () => {
-  const el = <GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />;
+describe('Global header scripts', () => {
+  const el = <GlobalHeader {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />;
 
   describe('setup()', () => {
     beforeEach((done) => {
       setupDom(el, () => {
-        const script = proxyquire('../js/globalNavigation.js', { 'jquery': global.$ });
+        const script = proxyquire('../js/GlobalHeader.js', { 'jquery': global.$ });
         script.setup();
         done();
       });
