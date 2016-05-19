@@ -1,9 +1,13 @@
-var $miniCartPanel = $('#mini-cart-panel');
+var $ = require('jquery')
 
-$('#show-mini-cart').on('click', function() {
-  $miniCartPanel.slideDown();
-});
+module.exports.setup = function() {
+  var $miniCartPanel = $('#mini-cart-panel');
 
-$('#hide-mini-cart').on('click', function() {
-  $miniCartPanel.slideUp();
-});
+  $('#show-mini-cart').on('click', function() {
+    $miniCartPanel.slideDown();
+  });
+
+  $('#hide-mini-cart').on('click', function() {
+    $miniCartPanel.slideUp();
+  });
+}

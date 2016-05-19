@@ -1,15 +1,27 @@
 const expect = require('expect');
-const fs = require('fs');
 const jsxQuery = require('jsxquery');
+
 const setupDom = require('./helpers/setupDom');
 const GlobalNavigation = require('../components/GlobalNavigation.jsx');
 const user = require('./fixtures/user');
 const cart = require('./fixtures/cart');
 
-describe('JS for global navigation menu', () => {
-  describe('for collapsible mini-cart', () => {
-    beforeEach(setupDom(<GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />,
-      fs.readFileSync('./js/globalNavigation.js', 'utf8')))
+// we use proxyquire() instead of require() to get the scripts we are testing
+// so that its references to jQuery point to the jQuery we're going to set up
+// inside our test DOM.
+const proxyquire = require("proxyquire");
+const script = proxyquire('../js/globalNavigation.js', { 'jquery': global.$ });
+
+describe('Global navigation menu scripts', () => {
+  const el = <GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />;
+
+  describe('setup()', () => {
+    beforeEach((done) => {
+      setupDom(el, () => {
+        script.setup();
+        done();
+      });
+    });
 
     it('starts off with mini-cart hidden', () => {
       expect($('#mini-cart-panel').css('display')).toEqual('none');
