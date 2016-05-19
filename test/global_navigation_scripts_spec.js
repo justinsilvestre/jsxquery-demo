@@ -10,7 +10,6 @@ const cart = require('./fixtures/cart');
 // so that its references to jQuery point to the jQuery we're going to set up
 // inside our test DOM.
 const proxyquire = require("proxyquire");
-const script = proxyquire('../js/globalNavigation.js', { 'jquery': global.$ });
 
 describe('Global navigation menu scripts', () => {
   const el = <GlobalNavigation {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />;
@@ -18,6 +17,7 @@ describe('Global navigation menu scripts', () => {
   describe('setup()', () => {
     beforeEach((done) => {
       setupDom(el, () => {
+        const script = proxyquire('../js/globalNavigation.js', { 'jquery': global.$ });
         script.setup();
         done();
       });
