@@ -1,5 +1,4 @@
 const jsdom = require('jsdom');
-const _eval = require('node-eval');
 
 const setupDom = (el, callback) => {
   const markup = el.markup();
