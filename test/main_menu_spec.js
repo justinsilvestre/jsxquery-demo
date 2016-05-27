@@ -4,12 +4,11 @@ const jsxQuery = require('jsxquery');
 const setupDom = require('./helpers/setupDom');
 const MainMenu = require('../components/MainMenu.jsx');
 const user = require('./fixtures/user');
-const cart = require('./fixtures/cart');
 
 describe('Main menu navigation component', () => {
   describe('when user is logged in', () => {
     before((done) =>
-      setupDom(<MainMenu {...cart.cartWithThreeItems} {...user.userIsLoggedIn} />, done)
+      setupDom(<MainMenu {...user.userIsLoggedIn} />, done)
     );
 
     it('displays welcome message', () => {
@@ -23,7 +22,7 @@ describe('Main menu navigation component', () => {
 
   describe('when user is not logged in', () => {
     before((done) =>
-      setupDom(<MainMenu {...cart.cartWithThreeItems} {...user.userIsNotLoggedIn} />, done)
+      setupDom(<MainMenu {...user.userIsNotLoggedIn} />, done)
     );
 
     it('does not display welcome message', () => {

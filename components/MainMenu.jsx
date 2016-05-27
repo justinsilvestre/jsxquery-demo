@@ -1,5 +1,4 @@
 const jsxQuery = require('jsxquery');
-const MiniCart = require('./MiniCart.jsx')
 
 class MainMenu extends jsxQuery.Component {
   render() {
